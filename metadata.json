@@ -26,13 +26,6 @@
     }
   ],
   "dependencies": [
-    {
-      "name": "puppetlabs-java",
-      "version_requirement": "1.4.1"
-    },
-    {
-      "name": "maestrodev-maven",
-      "version_requirement": "1.4.0"
-    }
+
   ]
 }
