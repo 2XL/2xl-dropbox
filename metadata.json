@@ -1,11 +1,11 @@
 {
-  "name": "2xl-stacksync",
-  "version": "0.0.10",
+  "name": "2xl-dropbox",
+  "version": "0.0.11",
   "author": "Chenglong Zou",
-  "summary": "Puppet module stacksync-client for personal cloud",
+  "summary": "Puppet module dropbox-client for personal cloud",
   "license": "GPLv2",
-  "source": "https://github.com/2xl/2xl-stacksync",
-  "project_page": "https://github.com/2xl/2xl-stacksync",
+  "source": "https://github.com/2xl/2xl-dropbox",
+  "project_page": "https://github.com/2xl/2xl-dropbox",
   "issues_url": "https://tickets.puppetlabs.com/browse/MODULES",
   "operatingsystem_support": [
     {
