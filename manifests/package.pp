@@ -45,9 +45,6 @@ class dropbox::package {
         before      => Package['nodejs'],
       }
     }
-    package { 'nodejs':
-      ensure => installed
-    }
 
     file { 'authorize.js':
       path      => "${dropbox::config::dx_home}/authorize.js",
@@ -63,7 +60,7 @@ class dropbox::package {
     }
 
     exec { 'authorize-dropbox-user':
-      command => "node ${dropbox::config::dx_home}/authorize.js ${dropbox::config::user} ${dropbox::config::password}",
+      command => "/usr/bin/node ${dropbox::config::dx_home}/authorize.js ${dropbox::config::user} ${dropbox::config::password}",
       user    => $dropbox::config::dx_uid,
       group   => $dropbox::config::dx_gid,
       cwd     => $dropbox::config::dx_home,
@@ -71,7 +68,7 @@ class dropbox::package {
       environment => ["HOME=${dropbox::config::dx_home}", "USER=${dropbox::config::dx_uid}"],
       creates => "${dropbox::config::dx_home}/.dropbox/sigstore.dbx",
       before  => Service['dropbox'],
-      require => [File['authorize.js'], Package['nodejs']]
+      require => [File['authorize.js']]
     }
   }
 

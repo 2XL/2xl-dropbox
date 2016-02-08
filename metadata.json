@@ -1,6 +1,6 @@
 {
   "name": "2xl-dropbox",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "author": "Chenglong Zou",
   "summary": "Puppet module dropbox-client for personal cloud",
   "license": "GPLv2",
@@ -16,6 +16,7 @@
     }
   ],
   "requirements": [
+
     {
       "name": "pe",
       "version_requirement": ">=3.2.0"
